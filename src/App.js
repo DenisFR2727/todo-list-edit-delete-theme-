@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { StateProvider } from './Context/context';
+import TodoList from './Components/Todo/TodoList';
+import AddTodo from './Components/Add/AddTodo';
+import CompleteAllTasks from './Components/Todo/CompleteAllTasks';
+import DeleteCompTasks from './Components/Todo/DeleteCompTasks';
+import { FaListUl } from "react-icons/fa";
+import './App.scss';
+import { useContext } from 'react';
+import ThemeContextTodo from './Context/theme/ThemeContext';
+import ThemeProvider from './Context/theme/ThemeProvider';
 
 function App() {
+  const { theme, title } = useContext(ThemeContextTodo);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StateProvider>
+      <div className="App" style={theme}>
+               <div className='icon-h2'>
+               <FaListUl className='icon-list-todo'/>
+                   <h2 style={title}>Todo List</h2>
+               </div>
+               
+               <AddTodo />
+               <div className='com-del-btn'>
+                  <CompleteAllTasks />
+                  <DeleteCompTasks />
+               </div>
+               <TodoList/>
+      </div>
+    </StateProvider>
   );
 }
 
-export default App;
+
+function AppTheme(){
+
+  return (
+     <ThemeProvider>
+           <App />
+     </ThemeProvider>
+  )
+}
+export default AppTheme;

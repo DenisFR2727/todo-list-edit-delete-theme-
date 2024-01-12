@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+.App {
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 15px;
+    margin: 100px auto 20px;
+    max-width: 540px;
+    padding: 40px 30px 70px;
+    width: 100%;
+}
+.App h2 {
+    align-items: center;
+    color: blue;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.App .icon-h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.App .icon-h2 .icon-list-todo{
+    margin-right: 10px;
+}
+.com-del-btn{
+    display: flex;
+    justify-content: space-between;
+}

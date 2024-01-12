@@ -1,0 +1,139 @@
+.com-all{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+
+    div{
+        margin-right: 3px;
+        font-size: 1.2rem;
+    }
+}
+.del-com-all {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+// list todo
+ul {
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+}
+.list li{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0;
+}
+.list li:hover {
+    background: rgba(245, 222, 179, 0.12);
+}
+.list ul li label::before {
+    cursor: pointer;
+    position: relative;
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.list ul li label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px; /* Adjust the margin as needed */
+}
+.list input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+
+//  Custom checkbox 
+  .list label {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .list label:before {
+    content:'';
+    background-color: transparent;
+    border: 2px solid #0079bf;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  .list input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .list input:checked + label:before {
+    background: #0079bf;
+  } 
+  .list input:checked + label {
+    text-decoration: line-through;
+  }
+//   --- btn edit and delete---
+.edit {
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 3px;
+    height: 25px;
+    padding: 5px 0;
+}
+.delete {
+    cursor: pointer;
+    border-radius: 3px;
+    height: 25px;
+    padding: 5px 0;
+}
+// ---------------Filter block---------------
+
+.filter-total-completed {
+    margin-top: 40px;
+    display: flex;
+    margin-right: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+.remaining-task{
+    display: inline-block;
+    margin-left: 50px;
+}
+.completed-task {
+    display: inline-block;
+    margin-left: 100px;
+}
+#total-tasks {
+    display: flex;
+    color: gray;
+    font-size: 13px;
+    margin-bottom: 20px;
+    margin-left: 2px;
+}
+// ------teme btn---------------
+.theme-btn {
+    // margin-left: 20px;
+}
+.theme-btn button {
+    width: 80px;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+}

@@ -1,0 +1,38 @@
+form {
+    background: #edeef0;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-left: 20px;
+
+    .list {
+        font-weight: 900;
+    }
+    .list input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .add-task {
+        border: 1px solid #f3f3f3;
+        font-size: 15px;
+        margin-bottom: 3px;
+        outline: none;
+        padding: 11px;
+        width: 100%;
+        background: none;
+    }
+    #btn {
+        background: #ff5945;
+        color: #fff;
+        border-radius: 40px;
+        cursor: pointer;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        padding: 16px 50px;
+    }
+}
+
